@@ -2,6 +2,6 @@ variable "environment_name" {
   default = "vpc-foundation"
 }
 
-output "key_name" {
+output "ssh_key_name" {
   value = "${aws_key_pair.main.key_name}"
 }
