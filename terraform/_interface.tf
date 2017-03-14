@@ -1,5 +1,5 @@
 variable "environment_name" {
-  default = "vpc-foundation"
+  type = "string"
 }
 
 output "ssh_key_name" {
