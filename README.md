@@ -2,6 +2,16 @@
 
 Creates an AWS SSH keypair.
 
+## Requirements
+
+The following environment variables must be set:
+
+```
+AWS_DEFAULT_REGION
+AWS_ACCESS_KEY_ID
+AWS_SECRET_ACCESS_KEY
+```
+
 ## Usage
 
 ```
