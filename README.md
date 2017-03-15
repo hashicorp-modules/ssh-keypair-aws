@@ -1,12 +1,12 @@
-# ssh-keypair
+# ssh-keypair-aws
 
-Shared SSH key for use with hashi modules.
+Creates an AWS SSH keypair.
 
-Usage:
+## Usage
 
 ```
 module "ssh_key" {
-  source           = "git@github.com:hashicorp-modules/ssh-keypair.git//terraform"
+  source           = "git@github.com:hashicorp-modules/ssh-keypair-aws.git//terraform"
   environment_name = "${var.environment_name}"
 }
 
