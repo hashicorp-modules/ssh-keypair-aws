@@ -16,7 +16,7 @@ AWS_SECRET_ACCESS_KEY
 
 ```
 module "ssh_key" {
-  source           = "git@github.com:hashicorp-modules/ssh-keypair-aws.git//terraform"
+  source           = "git@github.com:hashicorp-modules/ssh-keypair-aws.git"
   environment_name = "${var.environment_name}"
 }
 
