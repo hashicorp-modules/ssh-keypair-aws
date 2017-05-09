@@ -1,5 +1,5 @@
 module "ssh-keypair-data" {
-  source = "git@github.com:hashicorp-modules/ssh-keypair-data.git?ref=dan-refactor"
+  source = "git@github.com:hashicorp-modules/ssh-keypair-data.git"
 }
 
 resource "aws_key_pair" "main" {
