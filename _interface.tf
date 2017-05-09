@@ -1,9 +1,11 @@
-variable "environment_name" {
-  type = "string"
+# Required variables
+variable "ssh_key_name" {
+  description = "AWS key pair name that will be created"
 }
 
+# Outputs
 output "private_key_data" {
-  value = "${module.ssh_key_data.private_key_data}"
+  value = "${module.ssh-keypair-data.private_key_pem}"
 }
 
 output "ssh_key_name" {
