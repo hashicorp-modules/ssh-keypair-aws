@@ -1,5 +1,6 @@
 module "ssh-keypair-data" {
-  source = "git@github.com:hashicorp-modules/ssh-keypair-data.git"
+  source               = "git@github.com:hashicorp-modules/ssh-keypair-data.git"
+  private_key_filename = "${var.ssh_key_name}.pem"
 }
 
 resource "aws_key_pair" "main" {
