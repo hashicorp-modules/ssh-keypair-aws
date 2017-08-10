@@ -8,6 +8,10 @@ output "private_key_data" {
   value = "${module.ssh-keypair-data.private_key_pem}"
 }
 
+output "private_key_filename" {
+  value = "${module.ssh-keypair-data.private_key_filename}"
+}
+
 output "ssh_key_name" {
   value = "${aws_key_pair.main.key_name}"
 }
