@@ -2,27 +2,22 @@
 
 Creates an AWS SSH keypair.
 
-## Requirements
+## Environment Variables
 
-The following environment variables must be set:
+- `AWS_DEFAULT_REGION`
+- `AWS_ACCESS_KEY_ID`
+- `AWS_SECRET_ACCESS_KEY`
 
-```
-AWS_DEFAULT_REGION
-AWS_ACCESS_KEY_ID
-AWS_SECRET_ACCESS_KEY
-```
+## Required Terraform Variables
 
-## Usage
+- `ssh_key_name`
 
-```
-module "ssh_key" {
-  source           = "git@github.com:hashicorp-modules/ssh-keypair-aws.git"
-  environment_name = "${var.environment_name}"
-}
+## Optional Terraform Variables
 
-resource "aws_instance" "bastion" {
-  ...
-  key_name      = "${module.ssh_key.key_name}"
-  ...
-}
-```
+None.
+
+## Outputs
+
+- `private_key_data`
+- `private_key_filename`
+- `ssh_key_name`
