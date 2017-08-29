@@ -1,9 +1,21 @@
-output "public_key_data" {
-  value = "${module.ssh_keypair_data.public_key_data}"
+output "algorithm" {
+  value = "${module.tls_private_key.algorithm}"
+}
+
+output "private_key_pem" {
+  value = "${module.tls_private_key.private_key_pem}"
 }
 
 output "private_key_filename" {
-  value = "${module.ssh_keypair_data.private_key_filename}"
+  value = "${module.tls_private_key.private_key_filename}"
+}
+
+output "public_key_pem" {
+  value = "${module.tls_private_key.public_key_pem}"
+}
+
+output "public_key_openssh" {
+  value = "${module.tls_private_key.public_key_openssh}"
 }
 
 output "ssh_key_name" {
