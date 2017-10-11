@@ -1,1 +1,1 @@
-ssh_key_name = "simple"
+ssh_key_name = "ssh-keypair-aws-simple"
