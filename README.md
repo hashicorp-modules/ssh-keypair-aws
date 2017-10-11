@@ -1,6 +1,9 @@
 # AWS SSH Keypair Terraform Module
 
-Generates a secure RSA private key, encodes it as PEM, creates an AWS SSH keypair, downloads it locally, and updates the local key file permission to 0600.
+- Generates a secure RSA private key
+- Encodes the private key as PEM
+- Downloads the private locally and updates the local key file permission to 0600
+- Creates an AWS SSH keypair
 
 ## Environment Variables
 
