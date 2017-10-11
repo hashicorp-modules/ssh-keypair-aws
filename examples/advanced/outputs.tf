@@ -8,7 +8,7 @@ Run the below command to add this private key to the list maintained by ssh-agen
 
 The public part of the key loaded into the agent ("public_key_openssh" output) must be placed on the target system in ~/.ssh/authorized_keys.
 
-To SSH into a host using this private key, you can use the below command after updating USER@HOST.
+To SSH into the target host using this private key, you can use the below command after updating USER@HOST.
 
   ssh -i ${module.ssh_keypair_aws.private_key_filename} USER@HOST
 
