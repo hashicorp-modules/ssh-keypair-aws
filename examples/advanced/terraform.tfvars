@@ -1,2 +1,3 @@
-ssh_key_name = "ssh-keypair-aws-advanced"
-rsa_bits     = "3072"
+provision = "true"
+name      = "ssh-keypair-aws-advanced"
+rsa_bits  = "3072"

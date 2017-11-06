@@ -18,6 +18,10 @@ To force the generation of a new key, the private key instance can be "tainted" 
 README
 }
 
+output "private_key_name" {
+  value = "${module.ssh_keypair_aws.private_key_name}"
+}
+
 output "private_key_filename" {
   value = "${module.ssh_keypair_aws.private_key_filename}"
 }
@@ -35,5 +39,5 @@ output "public_key_openssh" {
 }
 
 output "ssh_key_name" {
-  value = "${module.ssh_keypair_aws.ssh_key_name}"
+  value = "${module.ssh_keypair_aws.name}"
 }

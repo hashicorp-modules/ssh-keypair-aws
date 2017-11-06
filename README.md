@@ -13,7 +13,8 @@
 
 ## Input Variables
 
-- `ssh_key_name`: [Required] Name of AWS keypair that will be created.
+- `provision`: [Optional] Override to prevent provisioning resources in this module, defaults to "true".
+- `name`: [Optional] Name of AWS keypair that will be created, defaults to random bytes..
 - `rsa_bits`: [Optional] When algorithm is "RSA", the size of the generated RSA key in bits. Defaults to "2048".
 
 ## Outputs
@@ -23,9 +24,9 @@
 - `private_key_pem`: The private key data in PEM format.
 - `public_key_pem`: The public key data in PEM format.
 - `public_key_openssh`: The public key data in OpenSSH authorized_keys format, if the selected private key format is compatible. All RSA keys are supported, and ECDSA keys with curves "P256", "P384" and "P251" are supported. This attribute is empty if an incompatible ECDSA curve is selected.
-- `ssh_key_name`: Name of AWS keypair.
+- `name`: Name of AWS keypair.
 
-## Module Dependencies
+## Submodules
 
 - [TLS Private Key Terraform Module](https://github.com/hashicorp-modules/tls-private-key)
 

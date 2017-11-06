@@ -1,2 +1,3 @@
-variable "ssh_key_name" { }
-variable "rsa_bits"     { }
+variable "provision" { }
+variable "name"      { }
+variable "rsa_bits"  { }

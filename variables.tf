@@ -1,5 +1,11 @@
-variable "ssh_key_name" {
-  description = "(Required) Name of AWS keypair that will be created."
+variable "provision" {
+  default     = "true"
+  description = "Override to prevent provisioning resources in this module, defaults to \"true\"."
+}
+
+variable "name" {
+  default     = ""
+  description = "(Optional) Name of AWS keypair that will be created, defaults to random bytes."
 }
 
 variable "rsa_bits" {
