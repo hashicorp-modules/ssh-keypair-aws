@@ -14,12 +14,13 @@
 ## Input Variables
 
 - `provision`: [Optional] Override to prevent provisioning resources in this module, defaults to "true".
-- `name`: [Optional] Name of AWS keypair that will be created, defaults to random bytes..
+- `name`: [Optional] Name of AWS keypair that will be created, defaults to "ssh-keypair-aws" appended with random bytes.
 - `rsa_bits`: [Optional] When algorithm is "RSA", the size of the generated RSA key in bits. Defaults to "2048".
 
 ## Outputs
 
 - `algorithm`: The algorithm that was selected for the key.
+- `private_key_name`: The private key name.
 - `private_key_filename`: The private key filename.
 - `private_key_pem`: The private key data in PEM format.
 - `public_key_pem`: The public key data in PEM format.

@@ -1,4 +1,4 @@
-output "_README" {
+output "zREADME" {
   value = <<README
 A private RSA key named "${module.ssh_keypair_aws.private_key_filename}" has been generated and downloaded locally. The file permissions have been changed to 0600 so the key can be used immediately for SSH or scp.
 

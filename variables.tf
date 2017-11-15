@@ -4,8 +4,8 @@ variable "provision" {
 }
 
 variable "name" {
-  default     = ""
-  description = "(Optional) Name of AWS keypair that will be created, defaults to random bytes."
+  default     = "ssh-keypair-aws"
+  description = "(Optional) Name of AWS keypair that will be created, defaults to \"ssh-keypair-aws\" appended with random bytes."
 }
 
 variable "rsa_bits" {
