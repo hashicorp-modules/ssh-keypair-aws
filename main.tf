@@ -5,14 +5,14 @@ terraform {
 module "tls_private_key" {
   source = "git@github.com:hashicorp-modules/tls-private-key.git?ref=f-refactor"
 
-  provision = "${var.provision}"
+  count     = "${var.count}"
   name      = "${var.name}"
   rsa_bits  = "${var.rsa_bits}"
 }
 
 resource "aws_key_pair" "main" {
-  count = "${var.provision == "true" ? 1 : 0}"
+  count = "${var.count}"
 
-  key_name   = "${module.tls_private_key.private_key_name}"
-  public_key = "${module.tls_private_key.public_key_openssh}"
+  key_name   = "${element(module.tls_private_key.private_key_name, count.index)}"
+  public_key = "${element(module.tls_private_key.public_key_openssh, count.index)}"
 }

@@ -23,5 +23,5 @@ output "public_key_openssh" {
 }
 
 output "name" {
-  value = "${element(aws_key_pair.main.*.key_name, 0)}"
+  value = "${aws_key_pair.main.*.key_name}"
 }
