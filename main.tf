@@ -3,7 +3,7 @@ terraform {
 }
 
 module "tls_private_key" {
-  source = "git@github.com:hashicorp-modules/tls-private-key.git?ref=f-refactor"
+  source = "github.com/hashicorp-modules/tls-private-key?ref=f-refactor"
 
   count     = "${var.count}"
   name      = "${var.name}"
