@@ -3,16 +3,17 @@ terraform {
 }
 
 module "tls_private_key" {
-  source = "github.com/hashicorp-modules/tls-private-key?ref=f-refactor"
+  # source = "github.com/hashicorp-modules/tls-private-key?ref=f-refactor"
+  source = "../tls-private-key"
 
-  count     = "${var.count}"
+  create    = "${var.create}"
   name      = "${var.name}"
   rsa_bits  = "${var.rsa_bits}"
 }
 
 resource "aws_key_pair" "main" {
-  count = "${var.count}"
+  count = "${var.create ? 1 : 0}"
 
-  key_name   = "${element(module.tls_private_key.private_key_name, count.index)}"
-  public_key = "${element(module.tls_private_key.public_key_openssh, count.index)}"
+  key_name_prefix = "${module.tls_private_key.private_key_name}-"
+  public_key      = "${module.tls_private_key.public_key_openssh}"
 }

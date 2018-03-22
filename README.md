@@ -13,7 +13,7 @@
 
 ## Input Variables
 
-- `count`: [Optional] Module count, defaults to "1".
+- `create`: [Optional] Create Module, defaults to true.
 - `name`: [Optional] Name of AWS keypair that will be created, defaults to "ssh-keypair-aws" appended with random bytes.
 - `rsa_bits`: [Optional] When algorithm is "RSA", the size of the generated RSA key in bits. Defaults to "2048".
 
