@@ -5,6 +5,8 @@
 - Downloads the private locally and updates the local key file permission to 0600
 - Creates an AWS SSH keypair
 
+Checkout [examples](./examples) for fully functioning examples.
+
 ## Environment Variables
 
 - `AWS_DEFAULT_REGION`

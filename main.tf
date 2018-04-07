@@ -2,6 +2,22 @@ terraform {
   required_version = ">= 0.9.3"
 }
 
+provider "aws" {
+  version = "~> 1.12"
+}
+
+provider "random" {
+  version = "~> 1.1"
+}
+
+provider "tls" {
+  version = "~> 1.1"
+}
+
+provider "null" {
+  version = "~> 1.0"
+}
+
 module "tls_private_key" {
   source = "github.com/hashicorp-modules/tls-private-key?ref=f-refactor"
 
